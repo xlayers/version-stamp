@@ -48,8 +48,10 @@
 
 </p>
 
-<img align="center" src="https://github.com/xlayers/version-stamp/raw/main/assets/xlayers_stamp.png?raw=true"/>
-
+<p align="center">
+   <img width="250" src="https://github.com/xlayers/version-stamp/raw/main/assets/xlayers_stamp.png?raw=true"/>
+</p>
+  
 ## What is xLayers version-stamp?
 
 With xLayers version-stamp we've started a new initiative of providing a community-driven way of version stamping that will help on a daily base for everybody!
