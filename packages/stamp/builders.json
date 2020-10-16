@@ -1,0 +1,10 @@
+{
+  "$schema": "@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "stamp": {
+      "implementation": "./src/lib/stamp/index.js",
+      "schema": "./src/lib/stamp/schema.json",
+      "description": "Stamp a version for your app"
+    }
+  }
+}

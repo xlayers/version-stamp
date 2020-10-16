@@ -1,0 +1,28 @@
+{
+  "name": "@xlayers/version-stamp",
+  "builders": "builders.json",
+  "schematics": "./collection.json",
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "version": "0.0.1",
+  "keywords": [
+    "angular",
+    "version-stamp",
+    "builder",
+    "versioning"
+  ],
+  "author": "Jeffrey Bosch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/xlayers/version-stamp/issues"
+  },
+  "devDependencies": {
+    "replace-in-file": "^6.1.0",
+    "simple-git": "^2.20.1"
+  },
+  "dependencies": {
+    "replace-in-file": "^6.1.0",
+    "simple-git": "^2.20.1"
+  }
+}

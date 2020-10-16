@@ -1,0 +1,11 @@
+{
+  "$schema": "@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Builder to version stamp your dist files",
+      "factory": "./src/lib/ng-add/index",
+      "schema": "./src/lib/ng-add/schema.json",
+      "aliases": ["install"]
+    }
+  }
+}
