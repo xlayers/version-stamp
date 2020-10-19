@@ -21,7 +21,7 @@
       "$valueDescription": "configuration"
     },
     "version": {
-      "type": "number",
+      "type": "string",
       "description": "The version to stamp",
       "$valueDescription": "configuration"
     },

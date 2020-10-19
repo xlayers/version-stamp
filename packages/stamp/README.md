@@ -58,10 +58,10 @@ The xLayers projects are driven by community contributions. Please send us your 
 
 ## Quick start
 
-1. Add `@xlayers/stamp` to your project
+1. Add `@xlayers/version-stamp` to your project
 
    ```sh
-   ng add @xlayers/stamp
+   ng add @xlayers/version-stamp
    ```
 
 2. The package will make some small changes to the `angular.json`

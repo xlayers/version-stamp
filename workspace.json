@@ -62,7 +62,7 @@
       "prefix": "xlayers-builders",
       "architect": {
         "stamp": {
-          "builder": "@xlayers/stamp:browser",
+          "builder": "@xlayers/version-stamp:stamp",
           "options": {}
         },
         "build": {
