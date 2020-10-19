@@ -53,7 +53,7 @@ export function stampBuilder(options: any): Rule {
 
     // adding deploy statement for builder
     project.architect['stamp'] = {
-      builder: '@xlayers/stamp:stamp',
+      builder: '@xlayers/version-stamp:stamp',
       options: {},
     };
 
