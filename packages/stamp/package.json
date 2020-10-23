@@ -5,7 +5,7 @@
   "ng-add": {
     "save": "devDependencies"
   },
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [
     "angular",
     "version-stamp",
