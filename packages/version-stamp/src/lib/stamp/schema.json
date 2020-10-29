@@ -29,6 +29,11 @@
       "type": "string",
       "description": "The version to stamp",
       "$valueDescription": "configuration"
+    },
+    "noBuild": {
+      "type": "boolean",
+      "default": false,
+      "description": "Skip build process during deployment."
     }
   }
 }

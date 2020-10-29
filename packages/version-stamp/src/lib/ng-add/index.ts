@@ -54,7 +54,9 @@ export function stampBuilder(options: any): Rule {
     // adding deploy statement for builder
     project.architect['stamp'] = {
       builder: '@xlayers/version-stamp:stamp',
-      options: {},
+      options: {
+        outputPath: project.architect.build.options.outputPath,
+      },
     };
 
     tree.overwrite(workspacePath, JSON.stringify(workspace, null, 2));
