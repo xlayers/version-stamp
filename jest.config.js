@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/packages/stamp', '<rootDir>/packages/demo'],
+  projects: ['<rootDir>/packages/version-stamp', '<rootDir>/packages/demo'],
 };

@@ -16,16 +16,23 @@ export default createBuilder<any>(
       const configuration = options?.configuration || 'production';
       const target = options?.target || 'build';
       const project = options?.project || context?.target?.project || '';
+      if (!options.noBuild) {
+        const build = await context.scheduleTarget({
+          target,
+          project,
+          configuration,
+        });
 
-      const build = await context.scheduleTarget({
-        target,
-        project,
-        configuration,
-      });
-
-      result = await build.result;
-      options = { ...options, outputPath: result.outputPath as string };
-
+        result = await build.result;
+        options = { ...options, outputPath: result.outputPath as string };
+      } else {
+        context.logger.info(`📦 Skipping build`);
+        const outputPath = options.outputPath;
+        result = {
+          outputPath,
+          success: true,
+        };
+      }
       // if the build is successfull
       let buildNumber = options.version;
 

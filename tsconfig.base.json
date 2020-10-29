@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@xlayers": ["packages/stamp/src/index.ts"]
+      "@xlayers": ["packages/version-stamp/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

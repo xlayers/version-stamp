@@ -2,50 +2,50 @@
   "version": 1,
   "projects": {
     "version-stamp": {
-      "root": "packages/stamp",
-      "sourceRoot": "packages/stamp/src",
+      "root": "packages/version-stamp",
+      "sourceRoot": "packages/version-stamp/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["packages/stamp/**/*.ts"]
+            "lintFilePatterns": ["packages/version-stamp/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "packages/stamp/jest.config.js",
+            "jestConfig": "packages/version-stamp/jest.config.js",
             "passWithNoTests": true
           }
         },
         "build": {
           "builder": "@nrwl/node:package",
           "options": {
-            "outputPath": "dist/packages/stamp",
-            "tsConfig": "packages/stamp/tsconfig.lib.json",
-            "packageJson": "packages/stamp/package.json",
-            "main": "packages/stamp/src/index.ts",
+            "outputPath": "dist/packages/version-stamp",
+            "tsConfig": "packages/version-stamp/tsconfig.lib.json",
+            "packageJson": "packages/version-stamp/package.json",
+            "main": "packages/version-stamp/src/index.ts",
             "assets": [
-              "packages/stamp/*.md",
+              "packages/version-stamp/*.md",
               {
-                "input": "packages/stamp",
+                "input": "packages/version-stamp",
                 "glob": "collection.json",
                 "output": "."
               },
               {
-                "input": "packages/stamp",
+                "input": "packages/version-stamp",
                 "glob": "builders.json",
                 "output": "."
               },
               {
-                "input": "packages/stamp",
+                "input": "packages/version-stamp",
                 "glob": "src/lib/**/*.json",
                 "output": "."
               },
               {
-                "input": "packages/stamp",
+                "input": "packages/version-stamp",
                 "glob": "src/lib/**/**/*.d.ts",
                 "output": "."
               }
@@ -63,7 +63,9 @@
       "architect": {
         "stamp": {
           "builder": "@xlayers/version-stamp:stamp",
-          "options": {}
+          "options": {
+            "outputPath": "dist/packages/demo"
+          }
         },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
