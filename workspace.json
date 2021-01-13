@@ -18,7 +18,8 @@
           "options": {
             "jestConfig": "packages/version-stamp/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/packages/version-stamp"]
         },
         "build": {
           "builder": "@nrwl/node:package",
@@ -50,7 +51,8 @@
                 "output": "."
               }
             ]
-          }
+          },
+          "outputs": ["{options.outputPath}"]
         }
       }
     },
@@ -94,7 +96,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -112,7 +113,8 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -147,7 +149,8 @@
           "options": {
             "jestConfig": "packages/demo/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/packages/demo"]
         }
       }
     },
