@@ -6,7 +6,9 @@ import {
 } from '@angular-devkit/schematics';
 import { addPackageToPackageJson, getWorkspace } from './utils';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function stampBuilder(options: any): Rule {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return (tree: Tree, _context: SchematicContext) => {
     addPackageToPackageJson(tree, 'replace-in-file', '6.1.0');
     addPackageToPackageJson(tree, 'simple-git', '2.20.1');
