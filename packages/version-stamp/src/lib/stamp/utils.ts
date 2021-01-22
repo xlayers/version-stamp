@@ -24,6 +24,7 @@ export const getBuildNumber = (
     });
 
 /** Replace _BUILD_HASH_ in dist files with the current build number */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const replaceBuildHash = async (buildNumber: any, options: any) =>
   await replaceInFile({
     from: /_BUILD_HASH_/g,

@@ -6,6 +6,7 @@ import {
 import { Schema } from './schema';
 import { getBuildNumber, replaceBuildHash } from './utils';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default createBuilder<any>(
   async (options: Schema, context: BuilderContext): Promise<BuilderOutput> => {
     try {
@@ -39,7 +40,7 @@ export default createBuilder<any>(
       if (result.success) {
         if (buildNumber) {
           // look into the files and replace the _BUILD_HASH_ with pre-defined version
-          const result = await replaceBuildHash(buildNumber, options);
+          await replaceBuildHash(buildNumber, options);
         } else {
           buildNumber = (await getBuildNumber(result, context)) as string;
 

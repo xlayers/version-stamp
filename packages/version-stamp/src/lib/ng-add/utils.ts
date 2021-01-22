@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { experimental, JsonParseMode, parseJson } from '@angular-devkit/core';
 import { SchematicsException, Tree } from '@angular-devkit/schematics';
 
@@ -29,7 +30,7 @@ export function getWorkspace(
 
   return { path, workspace };
 }
-export function sortObjectByKeys(obj: object) {
+export function sortObjectByKeys(obj: Record<string, unknown>) {
   return Object.keys(obj)
     .sort()
     .reduce((result, key) => (result[key] = obj[key]) && result, {});
