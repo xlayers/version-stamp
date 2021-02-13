@@ -4,5 +4,6 @@ export interface Schema {
   target?: string;
   version?: number | string;
   outputPath?: string;
+  files?: string[];
   noBuild?: boolean;
 }

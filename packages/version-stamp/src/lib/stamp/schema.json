@@ -27,7 +27,12 @@
     },
     "outputPath": {
       "type": "string",
-      "description": "The version to stamp",
+      "description": "The output path",
+      "$valueDescription": "configuration"
+    },
+    "files": {
+      "type": "array",
+      "description": "The list of patterns to match the files with",
       "$valueDescription": "configuration"
     },
     "noBuild": {

@@ -29,5 +29,5 @@ export const replaceBuildHash = async (buildNumber: any, options: any) =>
   await replaceInFile({
     from: /_BUILD_HASH_/g,
     to: buildNumber,
-    files: `${options.outputPath}/**/*.js`,
+    files: options.files.map((file) => `${options.outputPath}/**/${file}`),
   });
