@@ -51,6 +51,7 @@
 <p align="center">
    <img width="250" src="https://github.com/xlayers/version-stamp/raw/main/assets/xlayers_stamp.png?raw=true"/>
 </p>
+
 ## What is xLayers version-stamp?
 
 With xLayers version-stamp we've started a new initiative of providing a community-driven way of version stamping that will help on a daily base for everybody!
@@ -105,4 +106,24 @@ Example:
 
 ```sh
 ng run <your-app>:stamp --version="1.0.0"
+```
+
+- `--files` - You can put in here the list of file patterns containing `_BUILD_HASH_`
+
+Example:
+
+```sh
+ng run <your-app>:stamp --files=*.js,*.json
+```
+
+You can also set the configuration in `angular.json`
+
+```json
+  "stamp": {
+    "builder": "@xlayers/version-stamp:stamp",
+    "options": {
+      "outputPath": "dist/packages/demo",
+      "files": ["*.js", "*.json"]
+    }
+  }
 ```
