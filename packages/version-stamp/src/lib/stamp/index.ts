@@ -38,10 +38,6 @@ export default createBuilder<any>(
       let buildNumber = options.version;
 
       if (result.success) {
-        options = {
-          ...options,
-          files: options.files,
-        };
         if (buildNumber) {
           // look into the files and replace the _BUILD_HASH_ with pre-defined version
           await replaceBuildHash(buildNumber, options);
