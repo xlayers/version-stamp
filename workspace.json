@@ -67,7 +67,6 @@
           "builder": "@xlayers/version-stamp:stamp",
           "options": {
             "outputPath": "dist/packages/demo",
-            "files": ["*.js", "*.json"]
           }
         },
         "build": {

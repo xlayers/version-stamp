@@ -40,7 +40,7 @@ export default createBuilder<any>(
       if (result.success) {
         options = {
           ...options,
-          files: options.files.length ? options.files : ['*.js', '*.json'],
+          files: options.files,
         };
         if (buildNumber) {
           // look into the files and replace the _BUILD_HASH_ with pre-defined version

@@ -33,7 +33,8 @@
     "files": {
       "type": "array",
       "description": "The list of patterns to match the files with",
-      "$valueDescription": "configuration"
+      "$valueDescription": "configuration",
+      "default":  ["*.js", "*.json"]
     },
     "noBuild": {
       "type": "boolean",
