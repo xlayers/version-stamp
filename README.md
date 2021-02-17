@@ -57,6 +57,77 @@
 With xLayers version-stamp we've started a new initiative of providing a community-driven way of version stamping that will help on a daily base for everybody!
 The xLayers projects are driven by community contributions. Please send us your Pull Requests and feedback!
 
+## Quick start
+
+1. Add `@xlayers/version-stamp` to your project
+
+   ```sh
+   ng add @xlayers/version-stamp
+   ```
+
+2. The package will make some small changes to the `angular.json`
+
+3. Add the following snippet (only the version property) to your environment files.
+
+```ts
+export const environment = {
+  production: false,
+  version: '_BUILD_HASH_',
+};
+```
+
+4. Use the version that the packages has provided in your `environment` properties.
+
+````ts
+ import { environment } from '../environment'
+ ```
+```ts
+ @Component({
+    selector: 'xlayers-builders-root',
+ })
+ export class AppComponent {
+     version = environment.version;
+ }
+ ```
+5. Now you can stamp your build
+
+```sh
+ng run <your-app>:stamp
+````
+
+## Usage
+
+You can adjust some options to your needs.
+The available options are:
+
+- `--version` - You can put in here your own version.
+
+Example:
+
+```sh
+ng run <your-app>:stamp --version="1.0.0"
+```
+
+- `--files` - You can put in here the list of file patterns containing `_BUILD_HASH_`
+
+Example:
+
+```sh
+ng run <your-app>:stamp --files=*.js,*.json
+```
+
+You can also set the configuration in `angular.json`
+
+```json
+  "stamp": {
+    "builder": "@xlayers/version-stamp:stamp",
+    "options": {
+      "outputPath": "dist/packages/demo",
+      "files": ["*.js", "*.json"]
+    }
+  }
+```
+
 ## Want to help? [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/xlayers/version-stamp/issues)
 
 Want to file a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for [contributing](https://github.com/xlayers/version-stamp/blob/main/CONTRIBUTING.md) and then check out one of our issues in the hotlist: [community-help](https://github.com/xlayers/version-stamp/issues).
